@@ -1,141 +1,257 @@
 import './App.css'
 
 const resume = {
-  name: 'Your Name',
-  title: 'Frontend Developer',
-  email: 'you@email.com',
-  phone: '+91 98765 43210',
-  location: 'Ludhiana, Punjab',
+  name: 'Ajeta Salaria',
+  title: 'Full Stack Developer',
+  email: 'ajetasalaria@gmail.com',
+  phone: '+91 9138473415',
+  location: 'Chandigarh',
   github: 'https://github.com/yourusername',
   linkedin: 'https://linkedin.com/in/yourusername',
-  about: 'Passionate Frontend Developer with hands-on experience building React applications. I love creating clean, responsive UIs and turning ideas into real products.',
-  skills: ['React', 'JavaScript', 'HTML & CSS', 'Bootstrap', 'Git & GitHub', 'Vite', 'REST APIs', 'Context API'],
+
+  about:
+    'Full Stack Developer with 5+ years of experience in PHP, Laravel, WordPress, React.js, Zoho CRM integrations, and REST API development. Experienced in building scalable web applications, third-party integrations, and responsive frontend interfaces.',
+
+  skills: [
+    'React.js',
+    'JavaScript',
+    'PHP',
+    'Laravel',
+    'CodeIgniter',
+    'WordPress',
+    'Zoho CRM',
+    'REST APIs',
+    'MongoDB',
+    'MySQL',
+    'Bootstrap',
+    'Git & GitHub',
+    'Shopify',
+    'Postman',
+    'WooCommerce',
+    'jQuery',
+    'AJAX',
+  ],
+
   experience: [
     {
-      role: 'Frontend Developer Intern',
-      company: 'ABC Tech',
-      duration: 'Jan 2024 – Apr 2024',
+      role: 'Software Developer',
+      company: 'Easyleadz',
+      duration: 'June 2022 – Present',
       points: [
-        'Built reusable React components for the company dashboard.',
-        'Integrated REST APIs and managed state using Context API.',
-        'Improved page load speed by 30% through code optimization.',
-      ]
-    }
+        'Developed scalable web applications using Core PHP and CodeIgniter.',
+        'Built and integrated RESTful APIs for frontend and third-party systems.',
+        'Integrated Zoho CRM APIs using OAuth 2.0.',
+        'Customized WordPress websites using Elementor.',
+        'Worked with MySQL and MongoDB databases.',
+        'Developed Chrome Extensions for automation and scraping.',
+        'Managed hosting, DNS, cPanel, and server configurations.',
+      ],
+    },
+
+    {
+      role: 'Junior PHP Developer',
+      company: 'ZestGeek Solutions',
+      duration: 'April 2021 – June 2022',
+      points: [
+        'Customized WordPress themes and plugins.',
+        'Worked on Zoho CRM modules and workflow automation.',
+        'Integrated payment gateways in WooCommerce.',
+        'Used AJAX and jQuery for dynamic UI functionality.',
+        'Worked on Wix integrations and customization.',
+      ],
+    },
   ],
+
   projects: [
     {
-      name: 'ShopZone — E-commerce App',
-      tech: 'React, Bootstrap, Context API',
+      name: 'Zoho CRM Integration System',
+      tech: 'PHP, Zoho CRM API, OAuth 2.0',
       points: [
-        'Full e-commerce app with authentication, product CRUD, cart system.',
-        'Protected routes, search & filter, add to cart with quantity control.',
+        'Integrated Zoho CRM APIs for lead and customer management.',
+        'Implemented OAuth 2.0 authentication for secure API access.',
+        'Automated business workflows and data synchronization.',
       ],
-      link: 'https://github.com/yourusername/ecommerce-app'
+      link: 'https://github.com/yourusername/zoho-crm-project',
     },
+
     {
-      name: 'Employee CRUD App',
-      tech: 'React, Bootstrap',
+      name: 'WordPress WooCommerce Website',
+      tech: 'WordPress, WooCommerce, Elementor',
       points: [
-        'Form with validation to add, edit, delete employee records.',
-        'Live search and responsive table layout.',
+        'Customized WooCommerce store with payment gateway integration.',
+        'Implemented responsive UI and plugin customizations.',
+        'Optimized website performance and SEO.',
       ],
-      link: 'https://github.com/yourusername/crud-app'
-    }
+      link: 'https://github.com/yourusername/wordpress-project',
+    },
+
+    {
+      name: 'React Employee Management App',
+      tech: 'React.js, Bootstrap, REST APIs',
+      points: [
+        'Built employee CRUD operations with responsive UI.',
+        'Integrated REST APIs for dynamic data handling.',
+        'Implemented search and filter functionality.',
+      ],
+      link: 'https://github.com/yourusername/react-crud-app',
+    },
   ],
+
   education: [
     {
-      degree: 'B.Tech in Computer Science',
-      school: 'Your College Name',
-      year: '2021 – 2025',
-    }
+      degree: 'Bachelor of Technology (Computer Science)',
+      school: 'Kurukshetra University',
+      year: '2016 – 2020',
+    },
   ],
+
   certifications: [
     'React - The Complete Guide (Udemy)',
-    'JavaScript Algorithms and Data Structures (freeCodeCamp)',
-  ]
+    'JavaScript Algorithms and Data Structures',
+    'PHP & MySQL Certification',
+  ],
 }
 
 function App() {
   return (
     <div className="resume">
-
       {/* Header */}
+
       <header className="resume-header">
         <div>
           <h1>{resume.name}</h1>
+
           <p className="title">{resume.title}</p>
+
           <div className="contact-row">
             <span>📧 {resume.email}</span>
+
             <span>📞 {resume.phone}</span>
+
             <span>📍 {resume.location}</span>
-            <a href={resume.github} target="_blank" rel="noreferrer">GitHub</a>
-            <a href={resume.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+
+            <a
+              href={resume.github}
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+
+            <a
+              href={resume.linkedin}
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
       </header>
 
-      <div className="resume-body">
+      {/* Body */}
 
+      <div className="resume-body">
         {/* About */}
+
         <Section title="About Me">
           <p>{resume.about}</p>
         </Section>
 
         {/* Skills */}
+
         <Section title="Skills">
           <div className="skills-grid">
-            {resume.skills.map(s => <span key={s} className="skill-tag">{s}</span>)}
+            {resume.skills.map((skill, index) => (
+              <span key={index} className="skill-tag">
+                {skill}
+              </span>
+            ))}
           </div>
         </Section>
 
         {/* Experience */}
+
         <Section title="Experience">
-          {resume.experience.map((e, i) => (
-            <div key={i} className="entry">
+          {resume.experience.map((exp, index) => (
+            <div key={index} className="entry">
               <div className="entry-header">
-                <h3>{e.role} — <span>{e.company}</span></h3>
-                <span className="duration">{e.duration}</span>
+                <h3>
+                  {exp.role} — <span>{exp.company}</span>
+                </h3>
+
+                <span className="duration">
+                  {exp.duration}
+                </span>
               </div>
-              <ul>{e.points.map((p, j) => <li key={j}>{p}</li>)}</ul>
+
+              <ul>
+                {exp.points.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </Section>
 
         {/* Projects */}
+
         <Section title="Projects">
-          {resume.projects.map((p, i) => (
-            <div key={i} className="entry">
+          {resume.projects.map((project, index) => (
+            <div key={index} className="entry">
               <div className="entry-header">
                 <h3>
-                  {p.name}{' '}
-                  <a href={p.link} target="_blank" rel="noreferrer" className="project-link">↗</a>
+                  {project.name}
+
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project-link"
+                  >
+                    ↗
+                  </a>
                 </h3>
-                <span className="duration">{p.tech}</span>
+
+                <span className="duration">
+                  {project.tech}
+                </span>
               </div>
-              <ul>{p.points.map((pt, j) => <li key={j}>{pt}</li>)}</ul>
+
+              <ul>
+                {project.points.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </Section>
 
         {/* Education */}
+
         <Section title="Education">
-          {resume.education.map((e, i) => (
-            <div key={i} className="entry">
+          {resume.education.map((edu, index) => (
+            <div key={index} className="entry">
               <div className="entry-header">
-                <h3>{e.degree} — <span>{e.school}</span></h3>
-                <span className="duration">{e.year}</span>
+                <h3>
+                  {edu.degree} — <span>{edu.school}</span>
+                </h3>
+
+                <span className="duration">{edu.year}</span>
               </div>
             </div>
           ))}
         </Section>
 
         {/* Certifications */}
+
         <Section title="Certifications">
           <ul>
-            {resume.certifications.map((c, i) => <li key={i}>{c}</li>)}
+            {resume.certifications.map((cert, index) => (
+              <li key={index}>{cert}</li>
+            ))}
           </ul>
         </Section>
-
       </div>
     </div>
   )
@@ -145,6 +261,7 @@ function Section({ title, children }) {
   return (
     <section className="resume-section">
       <h2 className="section-title">{title}</h2>
+
       <div className="section-content">{children}</div>
     </section>
   )
