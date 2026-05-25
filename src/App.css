@@ -1,0 +1,131 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  color: #1a1a2e;
+  padding: 40px 16px;
+}
+
+.resume {
+  max-width: 860px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Header */
+.resume-header {
+  background: #1a1a2e;
+  color: white;
+  padding: 40px 48px;
+}
+
+.resume-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.resume-header .title {
+  font-size: 1rem;
+  color: #a0aec0;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: #cbd5e0;
+}
+
+.contact-row a {
+  color: #90cdf4;
+  text-decoration: none;
+}
+
+.contact-row a:hover { text-decoration: underline; }
+
+/* Body */
+.resume-body { padding: 32px 48px; }
+
+.resume-section { margin-bottom: 32px; }
+
+.section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #4f46e5;
+  border-bottom: 2px solid #e8e8f0;
+  padding-bottom: 6px;
+  margin-bottom: 16px;
+}
+
+/* Skills */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: #eef2ff;
+  color: #4f46e5;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+/* Entries */
+.entry { margin-bottom: 20px; }
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.entry-header h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.entry-header h3 span { color: #4f46e5; }
+
+.duration {
+  font-size: 0.8rem;
+  color: #718096;
+  white-space: nowrap;
+}
+
+.entry ul {
+  padding-left: 18px;
+}
+
+.entry ul li {
+  font-size: 0.88rem;
+  color: #4a5568;
+  margin-bottom: 4px;
+  line-height: 1.6;
+}
+
+.project-link {
+  color: #4f46e5;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .resume-header, .resume-body { padding: 24px 20px; }
+  .entry-header { flex-direction: column; }
+}
