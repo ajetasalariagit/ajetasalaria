@@ -110,6 +110,9 @@ const resume = {
     'JavaScript Algorithms and Data Structures',
     'PHP & MySQL Certification',
   ],
+  github: 'https://github.com/ajetasalariagit',
+  linkedin: 'https://www.linkedin.com/in/ajeta-salaria-259668244',
+
 }
 
 function App() {
@@ -203,14 +206,14 @@ function App() {
                 <h3>
                   {project.name}
 
-                  <a
+                  {/* <a
                     href={project.link}
                     target="_blank"
                     rel="noreferrer"
                     className="project-link"
                   >
                     ↗
-                  </a>
+                  </a> */}
                 </h3>
 
                 <span className="duration">

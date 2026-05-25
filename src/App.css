@@ -140,6 +140,7 @@ body {
 
 .entry ul {
   padding-left: 22px;
+    /* list-style: none; */
 }
 
 .entry li {
@@ -166,6 +167,8 @@ body {
 
 .resume-section ul {
   padding-left: 20px;
+  text-align: left;
+   /* list-style: none; */
 }
 
 .resume-section ul li {
